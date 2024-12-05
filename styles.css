@@ -22,7 +22,7 @@ a {
 header, footer {
     width: 100%;
     padding: 20px 0;
-    background: url("https://campuslandes.com/") #4f4f4f;
+    background: url("https://esnl.campuslandes.com/formations/bachelor-csi-3il") #4f4f4f;
     box-shadow: 0 0 15px #333;
 }
 header {
@@ -107,7 +107,9 @@ section > div {
     display: flex;
     justify-content: space-around;
     margin: 10px auto 0;
+
 }
+
 .social img {
     width: 50px;
     height: 50px;
@@ -166,27 +168,24 @@ section > div {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-.c60 {
-    width: 60%;
-    background-color: #8B8;
-}
-.c85 {
-    width: 85%;
-    background-color: #8B8;
+
+.c95 {
+    width: 15%;
+    background-color: #4B8;
 }
 .c90 {
-    width: 90%;
+    width: 10%;
     background-color: #4B8;
 }
-.c95 {
-    width: 95%;
-    background-color: #4B8;
+.c85 {
+    width: 20%;
+    background-color: #8B8;
 }
-.c100 {
-    width: 100%;
-    background-color: #4B8;
-    border-radius: 5px;
+.c80 {
+    width: 2%;
+    background-color: #8B8;
 }
+
 .comp-perso {
     display: flex;
     flex-flow: row wrap;
