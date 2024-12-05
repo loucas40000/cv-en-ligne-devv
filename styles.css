@@ -1,13 +1,17 @@
-/* STYLES GÉNÉRAUX */
+/* GENERAL STYLES */
 * {
-    font-family: Avenir, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Modern, readable font */
     padding: 0;
     margin: 0;
     text-align: justify;
     box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 body {
-    background: #ededed;
+    background: linear-gradient(45deg, #2d2d2d, #434343); /* Sleek dark gradient */
+    color: #ddd;
+    font-size: 1em;
+    line-height: 1.6em;
 }
 p {
     font-size: 1em;
@@ -15,28 +19,32 @@ p {
 }
 a {
     text-decoration: none;
-    color: #000;
+    color: #f0f0f0;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #00bcd4; /* Futuristic blue */
 }
 
 /* HEADER & FOOTER */
 header, footer {
     width: 100%;
     padding: 20px 0;
-    background: url("https://esnl.campuslandes.com/formations/bachelor-csi-3il") #4f4f4f;
-    box-shadow: 0 0 15px #333;
+    background: #212121;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 header {
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #f0f0f0;
     height: 120px;
 }
 header h1 {
-    color: white;
-    font-size: 1.5em;
+    color: #00bcd4; /* Futuristic blue */
+    font-size: 2em;
     width: 90%;
     margin: 0 auto;
 }
 footer {
-    border-top: 2px solid #fff;
+    border-top: 2px solid #f0f0f0;
 }
 footer p {
     width: 90%;
@@ -45,42 +53,48 @@ footer p {
     text-align: center;
 }
 footer a {
-    color: #fff;
+    color: #00bcd4;
 }
 
 /* SECTIONS */
 section {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     padding-bottom: 20px;
     margin: 20px auto;
-    box-shadow: 0 0 10px #bbb;
-    background-color: #fff;
+    background: #333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
 }
 section h2 {
     margin: 20px 0;
     width: 90%;
+    color: #fff;
 }
 section > div {
     width: 90%;
 }
 
-/* Section Informations */
+/* PROFILE SECTION */
 .photo-profil {
     text-align: center;
 }
 .photo-profil img {
     width: 150px;
     height: 150px;
-    border: 3px solid #fff;
-    box-shadow: 0 0 10px #777;
+    border: 3px solid #00bcd4;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     margin-top: -80px;
+    transition: transform 0.3s ease; /* Transition pour rendre l'effet fluide */
+}
+.photo-profil img:hover {
+    transform: rotate(360deg); /* Rotation de l'image de 360 degrés */
 }
 .presentation {
-    border-bottom: 2px dashed #ccc;
+    border-bottom: 2px dashed #00bcd4;
 }
 .presentation a {
     display: block;
@@ -88,13 +102,18 @@ section > div {
     padding: 10px;
     margin: 10px auto 30px;
     color: #fff;
-    background-color: #EA0;
-    box-shadow: 0 0 10px #ccc;
-    border-radius: 5px;
+    background-color: #00bcd4;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.presentation a:hover {
+    background-color: #0097a7;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .contact-flex {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     align-items: center;
 }
 .contact-flex p:first-child {
@@ -107,103 +126,133 @@ section > div {
     display: flex;
     justify-content: space-around;
     margin: 10px auto 0;
-
 }
-
 .social img {
     width: 50px;
     height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+.social img:hover {
+    transform: scale(1.2);
 }
 
-/* Section Expérience et Formation */
+/* EXPERIENCE & EDUCATION */
 .exp {
     display: flex;
-    flex-flow: row wrap;
-    border-bottom: 1px solid #bbb;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #444;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
 .exp-logo {
     flex: 0 0 25%;
     max-width: 100px;
+    transition: transform 0.3s ease;
+}
+.exp-logo:hover {
+    transform: scale(1.1);
 }
 .exp-info {
     flex: 0 0 70%;
     margin-left: auto;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
 }
 .exp img {
     width: 100%;
+    border-radius: 10px;
 }
 .exp h3 {
-    font-size: 1.2em;
+    font-size: 1.3em;
+    color: #00bcd4;
 }
 .exp h4 {
     font-size: 1em;
     font-weight: normal;
+    color: #bbb;
 }
 
-/* Section Compétences */
+/* SKILLS SECTION */
 .h3gauche {
     width: 90%;
 }
 .comp-pro {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     margin-bottom: 10px;
 }
 .comp-pro p {
     flex: 0 0 40%;
+    font-size: 1em;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
+
 .conteneur-barre-pro {
     flex: 0 0 60%;
-    border-radius: 5px;
-    background-color: grey;
-    border-bottom: 1px ridge grey;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #444; /* Fond de la barre */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden; /* Pour éviter que le dégradé dépasse les bords */
 }
+
 .barre {
     display: block;
     height: 100%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 10px;
+    transition: width 0.4s ease; /* Transition fluide lorsque la barre se remplit */
 }
 
+/* Dégradé coloré pour les compétences */
 .c95 {
-    width: 15%;
-    background-color: #4B8;
+    width: 17%;
+    background: linear-gradient(90deg, #00bcd4, #00e5ff); /* Dégradé bleu */
 }
+
 .c90 {
-    width: 10%;
-    background-color: #4B8;
-}
-.c85 {
     width: 20%;
-    background-color: #8B8;
+    background: linear-gradient(90deg, #4caf50, #81c784); /* Dégradé vert */
 }
+
+.c85 {
+    width: 12%;
+    background: linear-gradient(90deg, #ffeb3b, #fdd835); /* Dégradé jaune */
+}
+
 .c80 {
-    width: 2%;
-    background-color: #8B8;
+    width: 3%;
+    background: linear-gradient(90deg, #ff5722, #ff7043); /* Dégradé orange */
 }
 
 .comp-perso {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .conteneur-barre-perso {
     flex: 0 0 100%;
     height: 0.5em;
     margin-bottom: 0.25em;
     border-radius: 5px;
-    background-color: grey;
+    background-color: #444;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Section Intérêts */
+/* Ajout d'un effet au survol de la barre */
+.conteneur-barre-pro:hover .barre {
+    opacity: 0.8; /* Légère transparence au survol */
+    transform: scale(1.05); /* Un petit agrandissement pour un effet interactif */
+}
+
+/* INTERESTS SECTION */
 .interet {
     flex: 0 1 50%;
     display: flex;
-    flex-flow: column wrap;
+    flex-wrap: column;
     align-items: center;
     margin-bottom: 20px;
 }
@@ -211,17 +260,18 @@ section > div {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    box-shadow: 0 0 15px #555;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+.interet img:hover {
+    transform: scale(1.1);
 }
 
-/* Version Bureau CV */
+/* DESKTOP CV VERSION */
 @media screen and (min-width: 980px) {
     section {
         width: 80%;
-        box-shadow: 0 0 10px #bbb;
-    }
-    a:hover {
-        color: #EA0;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     }
     header h1 {
         width: 80%;
@@ -230,70 +280,28 @@ section > div {
         flex: 0 0 45%;
     }
     .presentation {
-        border-bottom: none;
-        border-right: 2px solid #ccc;
+        border-right: 2px solid #333;
         padding-right: 20px;
-        margin-left: auto;
     }
     .contact {
         padding-left: 20px;
-        margin-right: auto;
     }
     .presentation a {
         border: 2px solid transparent;
     }
     .presentation a:hover {
         color: #f28835;
-        background-color: #fff;
+        background-color: #333;
         border: 2px solid #f28835;
-        box-shadow: 0 0 20px #666;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
     .exp-logo {
         flex: 0 0 10%;
     }
     .exp-info, .exp-desc {
         flex: 0 0 85%;
-        margin-left: auto;
     }
     .interet {
         flex: 0 1 25%;
     }
-}
-
-/* Component */
-.star-rating {
-    border: solid 1px #ccc;
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 1.5em;
-    justify-content: space-around;
-    padding: 0 .2em;
-    text-align: center;
-    width: 5em;
-}
-.star-rating input {
-    display: none;
-}
-.star-rating label {
-    color: #ccc;
-    cursor: pointer;
-}
-.star-rating :checked ~ label {
-    color: #f90;
-}
-.star-rating label:hover,
-.star-rating label:hover ~ label {
-    color: #fc0;
-}
-
-/* Explanation */
-article {
-    background-color: #ffe;
-    box-shadow: 0 0 1em 1px rgba(0, 0, 0, .25);
-    color: #006;
-    font-family: cursive;
-    font-style: italic;
-    margin: 4em;
-    max-width: 30em;
-    padding: 2em;
 }
