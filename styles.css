@@ -1,6 +1,6 @@
 /* GENERAL STYLES */
 * {
-    font-family: 'Roboto', sans-serif; /* Modern, readable font */
+    font-family: 'Creepster', cursive; /* Police d'horreur pour les titres */
     padding: 0;
     margin: 0;
     text-align: justify;
@@ -8,52 +8,52 @@
     transition: all 0.3s ease;
 }
 body {
-    background: linear-gradient(45deg, #2d2d2d, #434343); /* Sleek dark gradient */
-    color: #ddd;
+    background: linear-gradient(45deg, #000, #3d3d3d); /* Gradient sombre */
+    color: #e0e0e0;
     font-size: 1em;
     line-height: 1.6em;
 }
 p {
     font-size: 1em;
     line-height: 1.5em;
+    color: #aaa;
 }
 a {
     text-decoration: none;
-    color: #f0f0f0;
+    color: #ff5252; /* Rouge sang */
     transition: color 0.3s ease;
 }
 a:hover {
-    color: #00bcd4; /* Futuristic blue */
+    color: #ff0000; /* Rouge intense */
 }
 
 /* HEADER & FOOTER */
 header, footer {
     width: 100%;
     padding: 20px 0;
-    background: #212121;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    background: #1c1c1c;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
 }
 header {
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid #ff5252;
     height: 120px;
 }
 header h1 {
-    color: #00bcd4; /* Futuristic blue */
-    font-size: 2em;
+    color: #ff5252; /* Rouge sang */
+    font-size: 2.5em;
     width: 90%;
     margin: 0 auto;
+    text-shadow: 0 0 10px #ff0000;
 }
 footer {
-    border-top: 2px solid #f0f0f0;
+    border-top: 2px solid #ff5252;
 }
 footer p {
     width: 90%;
     margin: 0 auto;
     color: #fff;
     text-align: center;
-}
-footer a {
-    color: #00bcd4;
+    text-shadow: 0 0 5px #ff5252;
 }
 
 /* SECTIONS */
@@ -64,14 +64,15 @@ section {
     width: 100%;
     padding-bottom: 20px;
     margin: 20px auto;
-    background: #333;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    background: #1a1a1a; /* Noir profond */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
 }
 section h2 {
     margin: 20px 0;
     width: 90%;
-    color: #fff;
+    color: #ff5252;
+    text-shadow: 0 0 10px #ff0000;
 }
 section > div {
     width: 90%;
@@ -80,21 +81,24 @@ section > div {
 /* PROFILE SECTION */
 .photo-profil {
     text-align: center;
+    position: relative;
 }
 .photo-profil img {
     width: 150px;
     height: 150px;
-    border: 3px solid #00bcd4;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border: 3px solid #ff5252;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
     border-radius: 50%;
     margin-top: -80px;
-    transition: transform 0.3s ease; /* Transition pour rendre l'effet fluide */
+    filter: grayscale(100%); /* Noir et blanc pour effet sinistre */
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 .photo-profil img:hover {
-    transform: rotate(360deg); /* Rotation de l'image de 360 degrés */
+    transform: rotate(360deg) scale(1.1); /* Rotation avec agrandissement */
+    filter: grayscale(0%);
 }
 .presentation {
-    border-bottom: 2px dashed #00bcd4;
+    border-bottom: 2px dashed #ff5252;
 }
 .presentation a {
     display: block;
@@ -102,14 +106,14 @@ section > div {
     padding: 10px;
     margin: 10px auto 30px;
     color: #fff;
-    background-color: #00bcd4;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #ff5252;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
     border-radius: 10px;
     transition: all 0.3s ease;
 }
 .presentation a:hover {
-    background-color: #0097a7;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-color: #990000; /* Rouge encore plus sombre */
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.9);
 }
 .contact-flex {
     display: flex;
@@ -122,19 +126,26 @@ section > div {
 .contact-flex p:last-child {
     flex: 0 0 60%;
 }
+
+/* SOCIAL LOGOS */
 .social {
     display: flex;
-    justify-content: space-around;
-    margin: 10px auto 0;
+    justify-content: space-evenly;
+    margin: 10px auto 20px;
+    width: 90%;
 }
 .social img {
-    width: 50px;
-    height: 50px;
+    width: 40px; /* Taille standardisée des icônes */
+    height: 40px;
     border-radius: 50%;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(100%); /* Effet noir et blanc */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .social img:hover {
     transform: scale(1.2);
+    filter: grayscale(0%);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8); /* Effet lumineux */
 }
 
 /* EXPERIENCE & EDUCATION */
@@ -148,10 +159,12 @@ section > div {
 .exp-logo {
     flex: 0 0 25%;
     max-width: 100px;
-    transition: transform 0.3s ease;
+    filter: grayscale(100%);
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 .exp-logo:hover {
     transform: scale(1.1);
+    filter: grayscale(0%);
 }
 .exp-info {
     flex: 0 0 70%;
@@ -165,7 +178,7 @@ section > div {
 }
 .exp h3 {
     font-size: 1.3em;
-    color: #00bcd4;
+    color: #ff5252;
 }
 .exp h4 {
     font-size: 1em;
@@ -193,59 +206,44 @@ section > div {
 .conteneur-barre-pro {
     flex: 0 0 60%;
     height: 20px;
+    margin-bottom: 10px; /* Ajout d'espacement */
     border-radius: 10px;
-    background-color: #444; /* Fond de la barre */
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
-    overflow: hidden; /* Pour éviter que le dégradé dépasse les bords */
+    background-color: #444; /* Fond sombre */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6); /* Relief interne */
+    overflow: hidden; /* Contenu limité aux bords */
 }
 
 .barre {
     display: block;
     height: 100%;
     border-radius: 10px;
-    transition: width 0.4s ease; /* Transition fluide lorsque la barre se remplit */
+    transition: width 0.4s ease; /* Transition fluide */
 }
 
-/* Dégradé coloré pour les compétences */
 .c95 {
-    width: 17%;
-    background: linear-gradient(90deg, #00bcd4, #00e5ff); /* Dégradé bleu */
+    width: 32%;
+    background: linear-gradient(90deg, #ff5252, #ff0000); /* Dégradé rouge */
 }
 
 .c90 {
-    width: 20%;
-    background: linear-gradient(90deg, #4caf50, #81c784); /* Dégradé vert */
+    width: 25%; /* Ajusté pour correspondre à la valeur */
+    background: linear-gradient(90deg, #990000, #660000);
 }
 
 .c85 {
-    width: 12%;
-    background: linear-gradient(90deg, #ffeb3b, #fdd835); /* Dégradé jaune */
+    width: 16%;
+    background: linear-gradient(90deg, #552200, #331100);
 }
 
 .c80 {
-    width: 3%;
-    background: linear-gradient(90deg, #ff5722, #ff7043); /* Dégradé orange */
+    width: 20%;
+    background: linear-gradient(90deg, #220000, #110000);
 }
 
-.comp-perso {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.conteneur-barre-perso {
-    flex: 0 0 100%;
-    height: 0.5em;
-    margin-bottom: 0.25em;
-    border-radius: 5px;
-    background-color: #444;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-/* Ajout d'un effet au survol de la barre */
+/* HOVER POUR L'INTERACTIVITÉ DES BARRES */
 .conteneur-barre-pro:hover .barre {
-    opacity: 0.8; /* Légère transparence au survol */
-    transform: scale(1.05); /* Un petit agrandissement pour un effet interactif */
+    opacity: 0.8; /* Légère transparence */
+    transform: scale(1.05); /* Agrandissement léger */
 }
 
 /* INTERESTS SECTION */
